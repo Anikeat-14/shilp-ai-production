@@ -2596,12 +2596,16 @@
                 const res = await fetch('http://localhost:8000/health', { method: 'GET' });
                 if (res.ok) {
                     AppState.isBackendConnected = true;
-                    document.getElementById('backend-status-badge').innerHTML = 
-                        '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="text-emerald-300 font-bold">FastAPI Core Active</span>';
+                    const badge = document.getElementById('backend-status-badge');
+                    if (badge) {
+                        badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="text-emerald-300 font-bold">FastAPI Core Active</span>';
+                    }
                 }
             } catch (e) {
-                document.getElementById('backend-status-badge').innerHTML = 
-                    '<span class="w-2 h-2 rounded-full bg-amber-400"></span><span class="text-amber-200 font-bold">Standalone Prototype (Ready)</span>';
+                const badge = document.getElementById('backend-status-badge');
+                if (badge) {
+                    badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-amber-400"></span><span class="text-amber-200 font-bold">Offline</span>';
+                }
             }
             console.log("KalaKart Prototype Initialized Successfully!");
         });
