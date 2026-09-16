@@ -270,7 +270,7 @@
         </div>
         <div class="flex-1">
             <h5 id="toast-title" class="font-bold text-xs text-amber-200">New Order Received!</h5>
-            <p id="toast-body" class="text-[11px] text-stone-300 mt-0.5 leading-snug">Suman Rao ordered Handpainted Blue Pottery Plate for ₹1,200 via UPI.</p>
+            <p id="toast-body" class="text-[11px] text-stone-300 mt-0.5 leading-snug">Suman Rao ordered Handcrafted Ceramic Whistle for ₹499 via UPI.</p>
         </div>
         <button onclick="document.getElementById('toast-notification').style.display='none'" class="text-stone-400 hover:text-white text-xs">
             <i class="fas fa-times"></i>
@@ -281,58 +281,9 @@
     <input type="file" id="real-file-picker" accept="image/*" class="hidden" onchange="handleImagePicked(event)"/>
 
     <!-- ======================================================================= -->
-    <!-- GLOBAL MASTER CONTROLLER & SIH 2026 INFO BAR                            -->
-    <!-- ======================================================================= -->
-    <header class="bg-kk-charcoal text-amber-100 py-2 px-4 border-b border-stone-800 text-xs sticky top-0 z-50 flex flex-wrap justify-between items-center gap-2 shadow-md">
-        <div class="flex items-center space-x-3">
-            <span id="backend-status-badge" class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-stone-900 border border-stone-700 text-[10.5px]">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-emerald-300 font-bold">FastAPI Core Active</span>
-            </span>
-            <span class="font-cinzel tracking-widest uppercase font-bold text-amber-200">KALAKART (कलाकार्ट)</span>
-            <span class="text-stone-500 hidden sm:inline">|</span>
-            <span class="text-stone-300 hidden sm:inline">SIH 2026 Official Prototype (PS 26090 &bull; MoSJE)</span>
-        </div>
-
-        <!-- Master View Mode Toggles -->
-        <div class="flex items-center space-x-1.5 overflow-x-auto py-1">
-            <button onclick="switchView('view-home')" id="btn-view-home" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-home mr-1"></i> Home
-            </button>
-            <button onclick="switchView('view-marketplace')" id="btn-view-marketplace" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-store mr-1"></i> Marketplace
-            </button>
-            <button onclick="switchView('view-dashboard')" id="btn-view-dashboard" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-chart-pie mr-1"></i> Dashboard
-            </button>
-            <button onclick="switchView('view-add-product')" id="btn-view-add-product" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-plus mr-1"></i> Add Product
-            </button>
-            <button onclick="switchView('view-shield')" id="btn-view-shield" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-shield-halved mr-1 text-amber-400"></i> AI Shield
-            </button>
-            <button onclick="switchView('view-kala-saathi')" id="btn-view-kala-saathi" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-microphone mr-1 text-red-400"></i> Kala Saathi
-            </button>
-            <button onclick="switchView('view-trending')" id="btn-view-trending" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-fire mr-1 text-orange-400"></i> Trending
-            </button>
-            <button onclick="switchView('view-orders')" id="btn-view-orders" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-wallet mr-1 text-emerald-400"></i> Earnings
-            </button>
-            <button onclick="switchView('view-mobile-pwa')" id="btn-view-mobile-pwa" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-300">
-                <i class="fas fa-mobile-screen mr-1 text-blue-400"></i> PWA
-            </button>
-            <button onclick="switchView('view-collage')" id="btn-view-collage" class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-amber-950/80 border border-amber-600/70 text-amber-200 hover:bg-amber-900">
-                <i class="fas fa-th-large mr-1"></i> Master Poster
-            </button>
-        </div>
-    </header>
-
-    <!-- ======================================================================= -->
     <!-- PRIMARY LUXURY BRAND TOP NAVBAR (Exact from Screenshot 180509)          -->
     <!-- ======================================================================= -->
-    <nav class="bg-kk-canvas/90 backdrop-blur-md border-b border-kk-border sticky top-10 z-40 px-6 py-3 transition-all">
+    <nav class="bg-kk-canvas/90 backdrop-blur-md border-b border-kk-border sticky top-0 z-40 px-6 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             
             <!-- Brand Logo: Woodblock Lotus & KALAKART -->
@@ -1049,7 +1000,7 @@
 
                             <!-- Voice Transcript Field -->
                             <textarea id="voice-transcript-hint" rows="2" placeholder="Spoken voice transcript will appear here, or type your craft description..." 
-                                      class="w-full bg-white border border-kk-border rounded-xl p-2.5 text-xs text-stone-700 focus:outline-none focus:border-kk-primary">यह पारंपरिक जयपुर ब्लू पॉटरी प्लेट है, प्राकृतिक रंगों से हाथ से बनाई गई है, 3 दिन लगे बनाने में।</textarea>
+                                      class="w-full bg-white border border-kk-border rounded-xl p-2.5 text-xs text-stone-700 focus:outline-none focus:border-kk-primary">यह पारंपरिक हस्तनिर्मित सिरेमिक सीटी (Handcrafted Ceramic Whistle) है, प्राकृतिक मिट्टी और रंगों से हाथ से बनाई गई है, 2 दिन लगे बनाने में।</textarea>
                         </div>
 
                     </div>
@@ -1059,13 +1010,13 @@
                         
                         <div>
                             <label class="font-bold text-kk-textDark block mb-1">Product Name *</label>
-                            <input id="inp-product-name" type="text" value="Handpainted Blue Pottery Plate" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
+                            <input id="inp-product-name" type="text" value="Handcrafted Ceramic Whistle" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
                         </div>
 
                         <div>
                             <label class="font-bold text-kk-textDark block mb-1">Craft Type *</label>
                             <select id="inp-craft-type" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm">
-                                <option value="Pottery">Pottery &amp; Ceramics (Jaipur Blue Pottery)</option>
+                                <option value="Pottery" selected>Pottery &amp; Ceramics (Ceramic Whistle / Terracotta)</option>
                                 <option value="Textiles">Handloom &amp; Weaving (Banarasi / Chanderi)</option>
                                 <option value="Woodwork">Woodwork &amp; Carving (Saharanpur)</option>
                                 <option value="Paintings">Paintings (Madhubani / Pichwai)</option>
@@ -1076,22 +1027,22 @@
                         <div class="grid grid-cols-2 gap-3">
                             <div>
                                 <label class="font-bold text-kk-textDark block mb-1">Material *</label>
-                                <input id="inp-material" type="text" value="Quartz Stone Powder, Clay, Cobalt Glaze" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
+                                <input id="inp-material" type="text" value="Natural Terracotta Clay, Ceramic Glaze, Organic Pigments" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
                             </div>
                             <div>
                                 <label class="font-bold text-kk-textDark block mb-1">Location *</label>
-                                <input id="inp-location" type="text" value="Jaipur, Rajasthan" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
+                                <input id="inp-location" type="text" value="Khurja / Gorakhpur, Uttar Pradesh" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-2 gap-3">
                             <div>
                                 <label class="font-bold text-kk-textDark block mb-1">Production Time *</label>
-                                <input id="inp-prod-time" type="text" value="3-5 days" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
+                                <input id="inp-prod-time" type="text" value="2-3 days" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs text-kk-textDark focus:border-kk-primary focus:outline-none shadow-sm"/>
                             </div>
                             <div>
                                 <label class="font-bold text-kk-textDark block mb-1">Raw Material Cost (₹) *</label>
-                                <input id="inp-material-cost" type="number" value="400" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs font-bold text-kk-primary focus:border-kk-primary focus:outline-none shadow-sm"/>
+                                <input id="inp-material-cost" type="number" value="150" class="w-full bg-white border border-kk-border rounded-xl px-3 py-2.5 text-xs font-bold text-kk-primary focus:border-kk-primary focus:outline-none shadow-sm"/>
                             </div>
                         </div>
 
@@ -1150,7 +1101,7 @@
                             <i class="fas fa-check"></i>
                         </div>
                         <span class="font-bold text-xs text-kk-textDark block">3. Product Understanding</span>
-                        <span id="step-sub-3" class="text-[10px] text-emerald-700 font-semibold block">Jaipur Blue Pottery</span>
+                        <span id="step-sub-3" class="text-[10px] text-emerald-700 font-semibold block">Ceramic Whistle</span>
                     </div>
 
                     <div class="space-y-1.5 text-center">
@@ -1166,7 +1117,7 @@
                             <i class="fas fa-check"></i>
                         </div>
                         <span class="font-bold text-xs text-kk-textDark block">5. Pricing Engine</span>
-                        <span id="step-sub-5" class="text-[10px] text-emerald-700 font-semibold block">₹ 1,250 Suggested</span>
+                        <span id="step-sub-5" class="text-[10px] text-emerald-700 font-semibold block">₹ 499 Suggested</span>
                     </div>
 
                     <div class="space-y-1.5 text-center">
@@ -1258,7 +1209,7 @@
                         <div class="flex-1 h-80 sm:h-96 rounded-2xl overflow-hidden border border-kk-border relative shadow bg-white">
                             <img id="detail-main-img" src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800" class="w-full h-full object-cover"/>
                             <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
-                                GI Certified &bull; Jaipur Blue Pottery
+                                GI Certified &bull; Traditional Ceramic Whistle Craft
                             </span>
                         </div>
 
@@ -1268,9 +1219,9 @@
                     <div class="lg:col-span-4 space-y-4">
                         
                         <div>
-                            <h2 id="detail-title" class="font-serif text-2xl sm:text-3xl font-bold text-kk-textDark leading-tight">Handpainted Blue Pottery Plate</h2>
+                            <h2 id="detail-title" class="font-serif text-2xl sm:text-3xl font-bold text-kk-textDark leading-tight">Handcrafted Ceramic Whistle</h2>
                             <p onclick="switchView('view-artisan-profile')" class="text-xs text-kk-primary font-bold mt-1 cursor-pointer hover:underline">
-                                By Rukmini Art &bull; Jaipur, Rajasthan &rarr;
+                                By Rukmini Art &bull; Khurja / Gorakhpur &rarr;
                             </p>
                         </div>
 
@@ -1282,14 +1233,14 @@
                         </div>
 
                         <p id="detail-desc" class="text-xs text-stone-700 leading-relaxed">
-                            Beautifully handpainted blue pottery plate with traditional floral motifs. Made using the age-old techniques of Jaipur's blue pottery, this piece brings a touch of heritage to your home.
+                            Authentic handcrafted ceramic whistle shaped and kiln-fired by rural traditional artisans. Produces a melodious, resonant bird whistle note, celebrating India's rich folk terracotta craft.
                         </p>
 
                         <!-- Craft Story Narrative Card -->
                         <div class="kk-card-recessed p-3.5 space-y-1.5 border border-kk-border">
                             <span class="font-serif text-xs font-bold text-kk-textDark block">Craft Story</span>
                             <p id="detail-story" class="text-[11px] text-stone-600 leading-relaxed">
-                                Blue pottery has been a symbol of Jaipur's rich artistic heritage for centuries. Each piece is hand painted by skilled artisans using natural pigments and a unique clay recipe passed down through generations.
+                                Ceramic and terracotta whistles have been a joyful symbol of Indian rural fairs and toy-making traditions for generations. Each whistle is hand-sculpted from river clay, tuned by ear for a clear acoustic tone, and finished with lead-free natural mineral glazes.
                             </p>
                             <span onclick="triggerStoryAudio()" class="text-[10px] text-kk-primary font-bold cursor-pointer hover:underline flex items-center gap-1">
                                 <i class="fas fa-volume-high"></i>
@@ -2565,13 +2516,13 @@
             activeListings: 18,
             pendingOrders: 7,
             currentProduct: {
-                title: "Handpainted Blue Pottery Plate",
+                title: "Handcrafted Ceramic Whistle",
                 craft: "Pottery & Ceramics",
-                material: "Quartz Stone Powder, Clay, Cobalt Glaze",
-                location: "Jaipur, Rajasthan",
-                cost: 400,
-                price: 1250,
-                story: "Blue pottery has been a symbol of Jaipur's rich artistic heritage for centuries. Each piece is hand painted by skilled artisans using natural pigments and a unique clay recipe passed down through generations.",
+                material: "Natural Terracotta Clay, Ceramic Glaze",
+                location: "Khurja, Uttar Pradesh",
+                cost: 150,
+                price: 499,
+                story: "Ceramic and terracotta whistles have been a joyful symbol of Indian rural fairs and toy-making traditions for generations. Each whistle is hand-sculpted from river clay, tuned by ear for a clear acoustic tone, and finished with lead-free natural mineral glazes.",
                 imageUrl: "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800",
                 artisan: "Rukmini Art"
             }
@@ -2677,6 +2628,11 @@
             const file = event.target.files[0];
             if (!file) return;
 
+            // Always enforce Handcrafted Ceramic Whistle
+            const nameInput = document.getElementById('inp-product-name');
+            if (nameInput) nameInput.value = "Handcrafted Ceramic Whistle";
+            AppState.currentProduct.title = "Handcrafted Ceramic Whistle";
+
             const reader = new FileReader();
             reader.onload = function(e) {
                 AppState.uploadedPhotoDataUrl = e.target.result;
@@ -2701,6 +2657,8 @@
                 // Update View 5 (Listing Review)
                 document.getElementById('detail-main-img').src = e.target.result;
                 document.getElementById('thumb-1').src = e.target.result;
+                const dTitle = document.getElementById('detail-title');
+                if (dTitle) dTitle.innerText = "Handcrafted Ceramic Whistle";
 
                 showToast("📷 Photo Loaded", `Successfully imported "${file.name}" for AI processing.`);
             };
@@ -2791,28 +2749,24 @@
             badge.className = "text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold";
             badge.innerText = "Story Captured";
 
-            // Infer fields from transcript
-            const el = document.getElementById('voice-transcript-hint');
-            const text = el ? String(el.value || '').toLowerCase() : '';
-            if (text.includes('dupatta') || text.includes('silk') || text.includes('saree')) {
-                document.getElementById('inp-product-name').value = "Handwoven Banarasi Silk Dupatta";
-                document.getElementById('inp-craft-type').value = "Textiles";
-                document.getElementById('inp-material').value = "Pure Silk with Golden Zari";
-                document.getElementById('inp-location').value = "Varanasi, Uttar Pradesh";
-                document.getElementById('inp-material-cost').value = "800";
-            }
+            // Always enforce Handcrafted Ceramic Whistle
+            const nameInput = document.getElementById('inp-product-name');
+            if (nameInput) nameInput.value = "Handcrafted Ceramic Whistle";
+            AppState.currentProduct.title = "Handcrafted Ceramic Whistle";
         }
 
         // -------------------------------------------------------------
         // 6-Stage AI Studio Pipeline Simulation
         // -------------------------------------------------------------
         function startAiMagicPipeline() {
-            // Update current product state from inputs
-            AppState.currentProduct.title = document.getElementById('inp-product-name').value || "Handpainted Craft";
-            AppState.currentProduct.cost = parseFloat(document.getElementById('inp-material-cost').value) || 400;
-            AppState.currentProduct.price = Math.round(AppState.currentProduct.cost * 2.5 + 250);
-            AppState.currentProduct.location = document.getElementById('inp-location').value || "Jaipur, Rajasthan";
-            AppState.currentProduct.material = document.getElementById('inp-material').value || "Clay & Minerals";
+            // Enforce Handcrafted Ceramic Whistle every time
+            AppState.currentProduct.title = "Handcrafted Ceramic Whistle";
+            const nameInput = document.getElementById('inp-product-name');
+            if (nameInput) nameInput.value = "Handcrafted Ceramic Whistle";
+            AppState.currentProduct.cost = parseFloat(document.getElementById('inp-material-cost').value) || 150;
+            AppState.currentProduct.price = Math.round(AppState.currentProduct.cost * 2.5 + 120);
+            AppState.currentProduct.location = document.getElementById('inp-location').value || "Khurja / Gorakhpur, UP";
+            AppState.currentProduct.material = document.getElementById('inp-material').value || "Natural Clay & Ceramic Glaze";
 
             // Switch to Magic View
             switchView('view-ai-magic');
@@ -2832,7 +2786,7 @@
             const stages = [
                 { num: 1, text: "4K Restored", icon: "check" },
                 { num: 2, text: "Studio Cutout", icon: "check" },
-                { num: 3, text: "GI Recognized", icon: "check" },
+                { num: 3, text: "Ceramic Whistle", icon: "check" },
                 { num: 4, text: "Bilingual Story", icon: "check" },
                 { num: 5, text: `₹ ${AppState.currentProduct.price} Suggested`, icon: "check" },
                 { num: 6, text: "Multi-Feed Ready", icon: "check" }
@@ -3182,8 +3136,8 @@
             }
 
             // Speak audio notification in Hindi
-            speakText("बधाई हो! आपको मुंबई से ₹1,200 का नया ऑनलाइन ऑर्डर प्राप्त हुआ है। भुगतान सीधे आपके बैंक में जमा हो गया है।");
-            showToast("🔔 New Order Received via ONDC!", "Suman Rao (Mumbai) purchased 'Handpainted Blue Pottery Plate' for ₹1,200. ₹1,200 settled to your UPI!");
+            speakText("बधाई हो! आपको मुंबई से ₹499 का नया ऑनलाइन ऑर्डर प्राप्त हुआ है। भुगतान सीधे आपके बैंक में जमा हो गया है।");
+            showToast("🔔 New Order Received via ONDC!", "Suman Rao (Mumbai) purchased 'Handcrafted Ceramic Whistle' for ₹499. ₹499 settled to your UPI!");
         }
 
         // -------------------------------------------------------------
